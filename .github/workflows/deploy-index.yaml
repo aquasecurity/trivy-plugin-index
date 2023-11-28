@@ -7,20 +7,20 @@ on:
 
 jobs:
   build:
-    name: Build index
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - run: |
-          mkdir data
-          cat plugins/*.yaml > data/index.yaml
+          mkdir -p data/v1
+          cat plugins/*.yaml > data/v1/index.yaml
       - uses: actions/upload-pages-artifact@v1
         with:
           path: data
           
   deploy:
     needs: build
-    name: Deploy index
+    name: Deploy
     runs-on: ubuntu-latest 
     environment:
       name: github-pages
