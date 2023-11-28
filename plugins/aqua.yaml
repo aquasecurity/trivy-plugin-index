@@ -1,0 +1,3 @@
+- name: aqua
+  summary: A plugin for integration with Aqua Security SaaS platform
+  repo: https://github.com/aquasecurity/trivy-plugin-aqua
