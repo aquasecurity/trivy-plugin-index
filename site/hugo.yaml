@@ -1,0 +1,10 @@
+baseURL: "/"
+languageCode: en-us
+title: Trivy Plugins
+enableGitInfo: true
+enableRobotsTXT: true
+canonifyURLs: true
+
+disableKinds:
+- taxonomy
+

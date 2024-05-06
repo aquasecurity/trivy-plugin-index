@@ -1,0 +1,17 @@
+.header {
+  background-color: #f8f9fa;
+  padding: 10px 0;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header-logo {
+  margin-top: -10px;
+  margin-left: 120px;
+}

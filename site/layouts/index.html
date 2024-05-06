@@ -1,0 +1,41 @@
+{{ define "main" }}
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h1>{{ .Site.Title }}</h1>
+        <p>Below you will find the list of Trivy plugins distributed on the centralized
+        <a href="https://github.com/aquasecurity/trivy-plugin-index">trivy-plugin-index</a>. To install these plugins on your machine:</p>
+        <ol>
+          <li><a href="https://aquasecurity.github.io/trivy/v0.51/getting-started/installation/">Install the latest version of Trivy</a></li>
+          <li>Run <code>trivy plugin install &lt;PLUGIN_NAME&gt;</code> to install a plugin.</li>
+        </ol>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Description</th>
+              <th>Repository</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{ range .Site.Data.v1.plugins }}
+            <tr>
+              <td><a href="{{ .repo }}" target="_blank">{{ .name }}</a></td>
+              <td>{{ if .type }}{{ .type }}{{ else }}generic{{ end }}</td>
+              <td>{{ .summary }}</td>
+              <td>
+                <a href="{{ .repo }}" target="_blank">
+                  <img src="https://img.shields.io/github/stars/{{ replace .repo "https://github.com/" "" }}?style=social" alt="GitHub stars">
+                </a>
+              </td>
+            </tr>
+            {{ end }}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+{{ end }}
