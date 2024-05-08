@@ -1,3 +1,4 @@
 - name: kubectl
-  summary: A plugin scanning the images of a kubernetes resource
-  repo: https://github.com/aquasecurity/trivy-plugin-kubectl
+  maintainer: aquasecurity
+  description: A plugin scanning the images of a kubernetes resource
+  repository: github.com/aquasecurity/trivy-plugin-kubectl

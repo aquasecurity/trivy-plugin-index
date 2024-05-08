@@ -16,18 +16,20 @@
               <th>Name</th>
               <th>Type</th>
               <th>Description</th>
+              <th>Maintainer</th>
               <th>Repository</th>
             </tr>
           </thead>
           <tbody>
-            {{ range .Site.Data.v1.plugins }}
+            {{ range .Site.Data.index }}
             <tr>
-              <td><a href="{{ .repo }}" target="_blank">{{ .name }}</a></td>
+              <td><a href="https://{{ .repository }}" target="_blank">{{ .name }}</a></td>
               <td>{{ if .type }}{{ .type }}{{ else }}generic{{ end }}</td>
-              <td>{{ .summary }}</td>
+              <td>{{ .description }}</td>
+              <td>{{ .maintainer }}</td>
               <td>
-                <a href="{{ .repo }}" target="_blank">
-                  <img src="https://img.shields.io/github/stars/{{ replace .repo "https://github.com/" "" }}?style=social" alt="GitHub stars">
+                <a href="https://{{ .repository }}" target="_blank">
+                  <img src="https://img.shields.io/github/stars/{{ replace .repository "github.com/" "" }}?style=social" alt="GitHub stars">
                 </a>
               </td>
             </tr>
