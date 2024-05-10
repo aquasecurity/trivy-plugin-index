@@ -14,9 +14,9 @@
           <thead>
             <tr>
               <th>Name</th>
-              <th>Type</th>
               <th>Description</th>
               <th>Maintainer</th>
+              <th>Output</th>
               <th>Repository</th>
             </tr>
           </thead>
@@ -24,9 +24,9 @@
             {{ range .Site.Data.index }}
             <tr>
               <td><a href="https://{{ .repository }}" target="_blank">{{ .name }}</a></td>
-              <td>{{ if .type }}{{ .type }}{{ else }}generic{{ end }}</td>
               <td>{{ .description }}</td>
               <td>{{ .maintainer }}</td>
+              <td class="text-center">{{ if .output }}✓{{ end }}</td>
               <td>
                 <a href="https://{{ .repository }}" target="_blank">
                   <img src="https://img.shields.io/github/stars/{{ replace .repository "github.com/" "" }}?style=social" alt="GitHub stars">
