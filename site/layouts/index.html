@@ -24,7 +24,7 @@
             {{ range .Site.Data.index }}
             <tr>
               <td><a href="https://{{ .repository }}" target="_blank">{{ .name }}</a></td>
-              <td>{{ .description }}</td>
+              <td>{{ .summary }}</td>
               <td>{{ .maintainer }}</td>
               <td class="text-center">{{ if .output }}✓{{ end }}</td>
               <td>

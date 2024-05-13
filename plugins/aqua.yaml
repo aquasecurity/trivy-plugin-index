@@ -1,4 +1,0 @@
-- name: aqua
-  maintainer: aquasecurity
-  description: A plugin for integration with Aqua Security SaaS platform
-  repository: github.com/aquasecurity/trivy-plugin-aqua

@@ -1,5 +1,2 @@
-- name: referrer
-  maintainer: aquasecurity
-  description: A plugin for OCI referrers
-  repository: github.com/aquasecurity/trivy-plugin-referrer
-  output: true
+name: referrer
+repository: github.com/aquasecurity/trivy-plugin-referrer
