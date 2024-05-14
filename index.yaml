@@ -1,5 +1,10 @@
 version: 1
 plugins:
+    - name: count
+      repository: github.com/aquasecurity/trivy-plugin-count
+      maintainer: aquasecurity
+      summary: Count vulnerabilities
+      output: true
     - name: kubectl
       repository: github.com/aquasecurity/trivy-plugin-kubectl
       maintainer: aquasecurity
