@@ -3,6 +3,8 @@ name: Deploy index
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - 'index.yaml'
   workflow_dispatch:
 
 # Default to bash
@@ -21,8 +23,11 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version-file: 'go.mod'
-      - name: Fetch plugin manifests and generate a list of plugins
-        run: go run cmd/crawler/main.go site/data/index.yaml
+      - name: Copy plugin index
+        run: |
+          cp index.yaml site/data/
+          mkdir -p site/public/v1
+          cp index.yaml site/public/v1/
       - name: Install Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
@@ -43,10 +48,6 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"          
-      - name: Store a yaml file for the plugin list
-        run: |
-          mkdir -p site/public/v1
-          cp site/data/index.yaml site/public/v1
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site/public
