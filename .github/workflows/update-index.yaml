@@ -34,6 +34,6 @@ jobs:
             This PR updates the index.yaml file.
           reviewers: |
             knqyf263
-            DmitriyLewenkk
+            DmitriyLewen
           add-paths: |
             index.yaml
