@@ -21,7 +21,7 @@
             </tr>
           </thead>
           <tbody>
-            {{ range .Site.Data.index }}
+            {{ range .Site.Data.index.plugins }}
             <tr>
               <td><a href="https://{{ .repository }}" target="_blank">{{ .name }}</a></td>
               <td>{{ .summary }}</td>

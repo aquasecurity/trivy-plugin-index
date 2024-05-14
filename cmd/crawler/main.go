@@ -14,10 +14,17 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
+const schemaVersion = 1
+
 // use a single instance of Validate, it caches struct info
 var validate = validator.New(validator.WithRequiredStructEnabled())
 
 type Index struct {
+	Version int      `yaml:"version"`
+	Plugins []Plugin `yaml:"plugins"`
+}
+
+type Source struct {
 	Name       string `yaml:"name"`
 	Repository string `yaml:"repository"`
 }
@@ -53,7 +60,7 @@ func run(ctx context.Context, args []string) error {
 		}
 		defer f.Close()
 
-		var index Index
+		var index Source
 		if err = yaml.NewDecoder(f).Decode(&index); err != nil {
 			return xerrors.Errorf("failed to decode the file: %w", err)
 		}
@@ -89,7 +96,11 @@ func run(ctx context.Context, args []string) error {
 	}
 	defer f.Close()
 
-	if err = yaml.NewEncoder(f).Encode(plugins); err != nil {
+	index := Index{
+		Version: schemaVersion,
+		Plugins: plugins,
+	}
+	if err = yaml.NewEncoder(f).Encode(index); err != nil {
 		return xerrors.Errorf("failed to encode the file: %w", err)
 	}
 
@@ -97,7 +108,7 @@ func run(ctx context.Context, args []string) error {
 }
 
 // Download downloads the configured source to the destination.
-func download(ctx context.Context, index Index) (*Plugin, error) {
+func download(ctx context.Context, index Source) (*Plugin, error) {
 	log.Printf("Downloading the plugin '%s' from %s", index.Name, index.Repository)
 	tmpDir, err := os.MkdirTemp("", "trivy-plugin-index-*")
 	if err != nil {
