@@ -1,0 +1,17 @@
+version: 1
+plugins:
+    - name: count
+      repository: github.com/aquasecurity/trivy-plugin-count
+      maintainer: aquasecurity
+      summary: Count vulnerabilities
+      output: true
+    - name: kubectl
+      repository: github.com/aquasecurity/trivy-plugin-kubectl
+      maintainer: aquasecurity
+      summary: Scan kubectl resources
+      output: false
+    - name: referrer
+      repository: github.com/aquasecurity/trivy-plugin-referrer
+      maintainer: aquasecurity
+      summary: Put referrers to OCI registry
+      output: false
