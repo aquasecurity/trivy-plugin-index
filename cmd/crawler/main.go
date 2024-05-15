@@ -32,6 +32,7 @@ type Source struct {
 // Plugin represents a plugin.
 type Plugin struct {
 	Name       string `yaml:"name" validate:"required"`
+	Version    string `yaml:"version" validate:"required"`
 	Repository string `yaml:"repository" validate:"required"`
 	Maintainer string `yaml:"maintainer" validate:"required"`
 	Summary    string `yaml:"summary" validate:"required"`
@@ -73,6 +74,7 @@ func run(ctx context.Context, args []string) error {
 		// Copy the necessary fields
 		plugins = append(plugins, Plugin{
 			Name:       plugin.Name,
+			Version:    plugin.Version,
 			Repository: plugin.Repository,
 			Maintainer: plugin.Maintainer,
 			Summary:    plugin.Summary,
