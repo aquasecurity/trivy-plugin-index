@@ -1,8 +1,8 @@
 # trivy-plugin-index
 
-This repository is the centralized plugin index for [Trivy][trivy-site], inspired by [krew-index]. It is meant to be useful only for plugin developers.
+This repository is the centralized plugin index for [Trivy][trivy-site], inspired by [krew-index][krew-index]. It is meant to be useful only for plugin developers.
 
-- **If you are a Trivy user:** You can find the list of kubectl plugins at the
+- **If you are a Trivy user:** You can find the list of Trivy plugins at the
   [Trivy plugin website][trivy-plugin-site].
 
 - **If you are a Trivy plugin developer:** Read the [Developer Guide][dev-guide] to learn how to package and publish a plugin in this repository.
