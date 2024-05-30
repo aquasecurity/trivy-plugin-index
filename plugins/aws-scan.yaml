@@ -1,0 +1,2 @@
+name: aws-scan
+repository: github.com/aquasecurity/trivy-aws
