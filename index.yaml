@@ -18,9 +18,3 @@ plugins:
       maintainer: aquasecurity
       summary: Put referrers to OCI registry
       output: false
-    - name: aws-scan
-      version: 0.1.0
-      repository: github.com/aquasecurity/trivy-aws
-      maintainer: aquasecurity
-      summary: AWS Cloud Scanning
-      output: false
