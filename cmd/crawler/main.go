@@ -34,7 +34,7 @@ type Plugin struct {
 	Name       string `yaml:"name" validate:"required"`
 	Version    string `yaml:"version" validate:"required"`
 	Repository string `yaml:"repository" validate:"required"`
-	Maintainer string `yaml:"maintainer" validate:"required"`
+	Maintainer string `yaml:"maintainer" validate:"required,alphanum"`
 	Summary    string `yaml:"summary" validate:"required"`
 	Output     bool   `yaml:"output"`
 }
