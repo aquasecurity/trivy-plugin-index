@@ -28,4 +28,4 @@ If your plugin is rejected from this repository, you can host your own repositor
 [trivy-site]: https://aquasecurity.github.io/trivy/latest/
 [trivy-repo]: https://github.com/aquasecurity/trivy
 [trivy-plugin-site]: https://aquasecurity.github.io/trivy-plugin-index/
-[dev-guide]: https://aquasecurity.github.io/trivy/latest/docs/advanced/plugins/
+[dev-guide]: https://aquasecurity.github.io/trivy/latest/docs/plugin/developer-guide/
