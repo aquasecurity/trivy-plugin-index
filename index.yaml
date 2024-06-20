@@ -8,8 +8,8 @@ plugins:
       maintainer: aquasecurity
       summary: Send results to Aqua Security
       output: false
-    - name: aws-scan
-      version: 0.11.0
+    - name: aws
+      version: 0.12.0
       repository: github.com/aquasecurity/trivy-aws
       maintainer: aquasecurity
       summary: Trivy AWS Cloud scanning plugin
