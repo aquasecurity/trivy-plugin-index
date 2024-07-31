@@ -38,3 +38,9 @@ plugins:
       maintainer: fatihtokus
       summary: A Trivy plugin that scans and outputs the results to a single page app.
       output: false
+    - name: sonarqube
+      version: 0.3.1
+      repository: github.com/umax/trivy-plugin-sonarqube
+      maintainer: umax
+      summary: Convert Trivy JSON report to SonarQube format
+      output: false
