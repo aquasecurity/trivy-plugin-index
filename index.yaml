@@ -44,3 +44,9 @@ plugins:
       maintainer: umax
       summary: Convert Trivy JSON report to SonarQube format
       output: false
+    - name: vexllm
+      version: 0.1.0
+      repository: github.com/AkihiroSuda/vexllm
+      maintainer: AkihiroSuda
+      summary: Silence negligible CVE alerts using LLM
+      output: false
