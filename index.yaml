@@ -3,13 +3,13 @@
 version: 1
 plugins:
     - name: aqua
-      version: v0.189.0
+      version: v0.190.0
       repository: github.com/aquasecurity/trivy-plugin-aqua
       maintainer: aquasecurity
       summary: Send results to Aqua Security
       output: false
     - name: aws
-      version: 0.14.2
+      version: 0.15.1
       repository: github.com/aquasecurity/trivy-aws
       maintainer: aquasecurity
       summary: Trivy AWS Cloud scanning plugin
