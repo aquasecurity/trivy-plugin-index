@@ -33,7 +33,7 @@ plugins:
       summary: Put referrers to OCI registry
       output: false
     - name: scan2html
-      version: 0.3.10
+      version: 0.3.13
       repository: github.com/fatihtokus/scan2html
       maintainer: fatihtokus
       summary: A Trivy plugin that scans and outputs the results to a single page app.
