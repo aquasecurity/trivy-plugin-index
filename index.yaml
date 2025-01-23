@@ -3,7 +3,7 @@
 version: 1
 plugins:
     - name: aqua
-      version: v0.194.0
+      version: v0.194.1
       repository: github.com/aquasecurity/trivy-plugin-aqua
       maintainer: aquasecurity
       summary: Send results to Aqua Security
@@ -39,7 +39,7 @@ plugins:
       summary: A Trivy plugin that scans and outputs the results to a single page app.
       output: false
     - name: sonarqube
-      version: 0.3.1
+      version: 0.3.2
       repository: github.com/umax/trivy-plugin-sonarqube
       maintainer: umax
       summary: Convert Trivy JSON report to SonarQube format
