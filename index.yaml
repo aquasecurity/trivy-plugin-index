@@ -54,5 +54,5 @@ plugins:
       version: 0.3.0
       repository: github.com/willswire/trivy-plugin-zarf
       maintainer: willswire
-      summary: Scan container images in Zarf packages
+      summary: Scan Zarf packages for vulnerabilities
       output: false
