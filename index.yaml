@@ -51,7 +51,7 @@ plugins:
       summary: Silence negligible CVE alerts using LLM
       output: false
     - name: zarf
-      version: 0.2.0
+      version: 0.3.0
       repository: github.com/willswire/trivy-plugin-zarf
       maintainer: willswire
       summary: Scan container images in Zarf packages
