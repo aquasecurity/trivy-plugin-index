@@ -3,7 +3,7 @@
 version: 1
 plugins:
     - name: aqua
-      version: v0.198.3
+      version: v0.199.0
       repository: github.com/aquasecurity/trivy-plugin-aqua
       maintainer: aquasecurity
       summary: Send results to Aqua Security
@@ -51,7 +51,7 @@ plugins:
       summary: Silence negligible CVE alerts using LLM
       output: false
     - name: zarf
-      version: 0.3.1
+      version: 0.4.1
       repository: github.com/willswire/trivy-plugin-zarf
       maintainer: willswire
       summary: Scan Zarf packages for vulnerabilities
