@@ -26,6 +26,12 @@ plugins:
       maintainer: aquasecurity
       summary: Scan kubectl resources
       output: false
+    - name: mcp
+      version: 0.0.4
+      repository: github.com/aquasecurity/trivy-mcp
+      maintainer: aquasecurity
+      summary: Starts an MCP server that knows how to work with Trivy
+      output: false
     - name: referrer
       version: 0.3.1
       repository: github.com/aquasecurity/trivy-plugin-referrer
