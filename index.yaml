@@ -3,7 +3,7 @@
 version: 1
 plugins:
     - name: aqua
-      version: v0.199.1
+      version: v0.200.0
       repository: github.com/aquasecurity/trivy-plugin-aqua
       maintainer: aquasecurity
       summary: Send results to Aqua Security
@@ -27,7 +27,7 @@ plugins:
       summary: Scan kubectl resources
       output: false
     - name: mcp
-      version: 0.0.5
+      version: 0.0.6
       repository: github.com/aquasecurity/trivy-mcp
       maintainer: aquasecurity
       summary: Starts an MCP server that knows how to work with Trivy
