@@ -3,7 +3,7 @@
 version: 1
 plugins:
     - name: aqua
-      version: v0.206.2
+      version: v0.206.3
       repository: github.com/aquasecurity/trivy-plugin-aqua
       maintainer: aquasecurity
       summary: Send results to Aqua Security
@@ -39,7 +39,7 @@ plugins:
       summary: Put referrers to OCI registry
       output: false
     - name: scan2html
-      version: 0.3.22
+      version: 0.3.24
       repository: github.com/fatihtokus/scan2html
       maintainer: fatihtokus
       summary: A Trivy plugin that scans and outputs the results to a single page app.
