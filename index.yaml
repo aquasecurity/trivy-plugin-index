@@ -3,7 +3,7 @@
 version: 1
 plugins:
     - name: aqua
-      version: v0.207.5
+      version: v0.207.6
       repository: github.com/aquasecurity/trivy-plugin-aqua
       maintainer: aquasecurity
       summary: Send results to Aqua Security
