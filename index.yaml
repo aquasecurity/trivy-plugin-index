@@ -27,7 +27,7 @@ plugins:
       summary: Scan kubectl resources
       output: false
     - name: mcp
-      version: 0.0.18
+      version: 0.0.20
       repository: github.com/aquasecurity/trivy-mcp
       maintainer: aquasecurity
       summary: Starts an MCP server that knows how to work with Trivy
