@@ -50,6 +50,12 @@ plugins:
       maintainer: umax
       summary: Convert Trivy JSON report to SonarQube format
       output: false
+    - name: vens
+      version: 0.1.0
+      repository: github.com/venslabs/vens
+      maintainer: fahedouch
+      summary: Evaluate and prioritize vulnerabilities based on context
+      output: false
     - name: vexllm
       version: 0.1.0
       repository: github.com/AkihiroSuda/vexllm
