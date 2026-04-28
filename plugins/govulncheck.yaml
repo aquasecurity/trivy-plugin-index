@@ -1,0 +1,2 @@
+name: govulncheck
+repository: github.com/datadog/trivy-plugin-govulncheck
